@@ -1,0 +1,15 @@
+Package:RecodeFCit
+Type: Package
+Title: Recode forced-choice items into binary com
+Version: 0.1.0
+Author: Felipe Valetini
+Maintainer: The package maintainer <valentini.felipe@gmail.com>
+Description: Recode forced-choice items into binary comparisions.
+    Available functions:
+    checkTie() = Check the data for ties;
+    checkTypo() = Check for errors in the dataset, likewise typos and whitespaces;
+    recodeErrors() = Recode typos or ties into missing;
+    recodeData() = Recode the data from the least and most format INTO binary comparisons.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
