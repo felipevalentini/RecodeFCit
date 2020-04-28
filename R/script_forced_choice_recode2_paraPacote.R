@@ -84,7 +84,9 @@ recodeErrors<- function(data, type="mole", RecTie=T, RecTyp=T, Cd=c("a","b","c")
       for (trl in 1:ntripl){
         for(e in 1:nrow(data)){
           if (sum(is.na(data[e,c(bl[1],bl[2],bl[3])])) < 2) {
-            if(!is.na(data[e,bl[1]]) &  data[e,bl[1]] %in% data[e,bl[2]]){
+            if(data[e,bl[1]] %in% data[e,bl[2]] & data[e,bl[2]] %in% data[e,bl[3]]){
+              data[e,c(bl[1],bl[2],bl[3])]<-NA}
+            else if(!is.na(data[e,bl[1]]) &  data[e,bl[1]] %in% data[e,bl[2]]){
               data[e,c(bl[1],bl[2])]<-NA}
             else if(!is.na(data[e,bl[1]]) &  data[e,bl[1]] %in% data[e,bl[3]]){
               data[e,c(bl[1],bl[3])]<-NA}
